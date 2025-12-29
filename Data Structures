@@ -1,0 +1,957 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "9d531013-c823-4b11-a6dd-e8f28c96d6a0",
+   "metadata": {},
+   "source": [
+    "# Some List Methods"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 112,
+   "id": "ceae6851-1e08-403a-82ea-67380d30073e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "2"
+      ]
+     },
+     "execution_count": 112,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1 = ['Orange', 'Kiwi', 'Banana', 'Apple', 'Watermelon', 'Banana', 'Apple']\n",
+    "\n",
+    "lst1.count('Apple')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 113,
+   "id": "42a0d820-7313-4f38-aa66-7637a35e8e36",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 113,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1.count('Kiwi')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 114,
+   "id": "7b4f8298-54c6-489c-85ed-c29fff8271da",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "3"
+      ]
+     },
+     "execution_count": 114,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1.index('Apple')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 115,
+   "id": "c442aa53-4af6-4a1e-af3d-cd7053442aa5",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 115,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1.index('Kiwi')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 116,
+   "id": "ef9a7a3a-36eb-4887-a316-1f11c0df529d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Apple', 'Banana', 'Watermelon', 'Apple', 'Banana', 'Kiwi', 'Orange']"
+      ]
+     },
+     "execution_count": 116,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1.reverse()\n",
+    "lst1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 117,
+   "id": "acd0431c-5308-4c30-9a90-69af6d89e0b7",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Apple', 'Banana', 'Watermelon', 'Apple', 'Banana', 'Kiwi', 'Orange', 'Grape']"
+      ]
+     },
+     "execution_count": 117,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1.append('Grape')\n",
+    "lst1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 118,
+   "id": "1561b56c-42cb-46f6-9616-5d664eaf3612",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Apple', 'Apple', 'Banana', 'Banana', 'Grape', 'Kiwi', 'Orange', 'Watermelon']"
+      ]
+     },
+     "execution_count": 118,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1.sort()\n",
+    "lst1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 119,
+   "id": "b9e32a2b-3b2d-4f1a-93a3-6df6e7931f78",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Apple', 'Apple', 'Banana', 'Banana', 'Grape', 'Kiwi', 'Orange']"
+      ]
+     },
+     "execution_count": 119,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "lst1.pop()\n",
+    "lst1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "875a1595-c2cc-46e1-a5a8-1f59ea40834f",
+   "metadata": {},
+   "source": [
+    "# Using list as Stack"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 120,
+   "id": "6d01ad5e-3a42-491c-99be-c4a28a15aa52",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 1, 3, 4, 6, 7, 8, 9]"
+      ]
+     },
+     "execution_count": 120,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stack = [1,8,9,7,0,6,4,3,]\n",
+    "stack.sort()\n",
+    "stack"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 121,
+   "id": "13477df2-2920-4952-8c2a-316120a1dba4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 1, 3, 4, 6, 7, 8, 9, 2]"
+      ]
+     },
+     "execution_count": 121,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stack.append(2)\n",
+    "stack"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 122,
+   "id": "8e633dbe-d490-464c-9e15-c5458e9ed55b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 1, 3, 4, 6, 7, 8, 9, 2, 4]"
+      ]
+     },
+     "execution_count": 122,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stack.append(4)\n",
+    "stack"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 123,
+   "id": "e5e2d51b-a3f2-491b-9037-eadfd8659756",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 1, 3, 4, 6, 7, 8, 9, 2]"
+      ]
+     },
+     "execution_count": 123,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "stack.pop()\n",
+    "stack"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4a0f533c-9125-4e00-82b1-c5a8f0583228",
+   "metadata": {},
+   "source": [
+    "# Using list as Queue"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 124,
+   "id": "072abdfd-c806-40ae-bbd6-38e877b18d03",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "from collections import deque\n",
+    "\n",
+    "queue = deque(['Abhinav', 'Suman', 'Tanushree'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 125,
+   "id": "2a5e051a-deca-453f-8d91-58f0191853c4",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "deque(['Abhinav', 'Suman', 'Tanushree', 'Khemraj'])"
+      ]
+     },
+     "execution_count": 125,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "queue.append('Khemraj')\n",
+    "queue"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 126,
+   "id": "65ef5cb4-4844-436b-a172-f16e7736b27e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "queue.append('Raj')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 127,
+   "id": "c4e12628-9193-49d1-8b41-faffed9083d6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "deque(['Suman', 'Tanushree', 'Khemraj', 'Raj'])"
+      ]
+     },
+     "execution_count": 127,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "queue.popleft()\n",
+    "queue"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 128,
+   "id": "8f3f9443-d73b-4bad-a4bf-c01be0d00de2",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "deque(['Raj', 'Suman', 'Tanushree', 'Khemraj'])"
+      ]
+     },
+     "execution_count": 128,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "queue.rotate()\n",
+    "queue"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f4e4c549-a092-4a84-adf8-d4eb1533b936",
+   "metadata": {},
+   "source": [
+    "# List Comprehensions"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 129,
+   "id": "72626c00-a951-4f08-b0a7-d079bd7e7221",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
+      ]
+     },
+     "execution_count": 129,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "squares = [x**2 for x in range(10)]\n",
+    "squares"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 130,
+   "id": "31082a10-fb57-44c3-814f-563ff472ebb0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]"
+      ]
+     },
+     "execution_count": 130,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "[(x,y) for x in [1,2,3] for y in [3,1,4] if x != y]"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 131,
+   "id": "b95924cf-3356-412b-a8c8-b0a4ca07c7de",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Lion', 'Tiger', 'Monkey', 'Elephant', 'Frog']"
+      ]
+     },
+     "execution_count": 131,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "animals = ['lion', 'tiger', 'monkey', 'elephant', 'frog']\n",
+    "filtered_animals = [animal.title() for animal in animals]\n",
+    "filtered_animals"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 132,
+   "id": "23507987-e3b1-4570-bd01-6474463283aa",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[4, 16, 36, 64]"
+      ]
+     },
+     "execution_count": 132,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "numbers = [1,2,3,4,5,6,7,8,9]\n",
+    "squared_num = [num ** 2 for num in numbers if num%2 == 0]\n",
+    "squared_num"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 133,
+   "id": "0438c93c-f256-437a-926b-53d7b9af7be6",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[('Alice', 5), ('Bob', 3), ('Christopher', 11), ('Dan', 3), ('Eve', 3)]"
+      ]
+     },
+     "execution_count": 133,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "names = [\"Alice\", \"Bob\", \"Christopher\", \"Dan\", \"Eve\"]\n",
+    "NA = [(name, len(name)) for name in names]\n",
+    "NA"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 134,
+   "id": "98a9c633-9a1f-436a-ba64-f262b6f11314",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'Pythn s n mzng prgrmmng lngg'"
+      ]
+     },
+     "execution_count": 134,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sentence = \"Python is an amazing programming language\"\n",
+    "new_sentence = [sen for sen in sentence if sen not in \"aeiouAEIOU\"]\n",
+    "clean_sentence = \"\".join(new_sentence)\n",
+    "clean_sentence"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 135,
+   "id": "3812b903-c554-4fea-8cdf-bc1251bbe157",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Even', 'Odd', 'Odd', 'Even', 'Odd']"
+      ]
+     },
+     "execution_count": 135,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "data = [10,21,33,44,55]\n",
+    "new_data = [\"Even\" if num %2 == 0 else \"Odd\" for num in data]\n",
+    "new_data"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 136,
+   "id": "9cab0143-80fb-4a82-a2b9-a858827f26ed",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['RADAR', 'LEVEL']"
+      ]
+     },
+     "execution_count": 136,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "sentence = ['radar', 'python', 'level', 'world']\n",
+    "\n",
+    "new_sen = [char.upper() for char in sentence if char == char[::-1]]\n",
+    "new_sen\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 137,
+   "id": "c4b23399-73be-493d-881f-33864ba23887",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "['Pass', 'fail', 'Pass', 'Pass', 'fail']"
+      ]
+     },
+     "execution_count": 137,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "scores = [85, 42, 78, 92, 30]\n",
+    "new_scores = [\"Pass\" if num >= 70 else \"fail\" for num in scores]\n",
+    "new_scores"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 138,
+   "id": "1fe2dbb9-08fb-44da-8c50-a6d8ab7e93d0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "[1, 2, 3, 4, 5, 6, 7, 8]"
+      ]
+     },
+     "execution_count": 138,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "cube = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]]\n",
+    "\n",
+    "new = [item for outer in cube for row in outer for item in row]\n",
+    "new"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 139,
+   "id": "7b0ef666-ea7b-4716-b952-9ef432bdc73e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1, 2, 3, 4, 5]\n",
+      "[2, 4, 6, 8, 10]\n",
+      "[3, 6, 9, 12, 15]\n",
+      "[4, 8, 12, 16, 20]\n",
+      "[5, 10, 15, 20, 25]\n"
+     ]
+    }
+   ],
+   "source": [
+    "table = [[i * j for j in range(1,6)] for i in range (1,6)]\n",
+    "\n",
+    "for row in table:\n",
+    "    print(row)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a1012300-557d-4aee-9f89-26251ac38217",
+   "metadata": {},
+   "source": [
+    "# Tuples and Sequence"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 141,
+   "id": "443a8bff-e169-48de-abbc-6bc8232642e0",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "12323"
+      ]
+     },
+     "execution_count": 141,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "t = 12323, 333, \"Hello\"\n",
+    "t[0]\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 142,
+   "id": "feb794f1-365a-47ca-b934-e4e5cf0fee4a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "((12323, 333, 'Hello'), (1, 2, 3, 4, 5))"
+      ]
+     },
+     "execution_count": 142,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "u = t, (1,2,3,4,5)\n",
+    "u"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 143,
+   "id": "23ebcc0b-21fd-476a-b13a-6c3a1f1ce9d3",
+   "metadata": {},
+   "outputs": [
+    {
+     "ename": "TypeError",
+     "evalue": "'tuple' object does not support item assignment",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[31m---------------------------------------------------------------------------\u001b[39m",
+      "\u001b[31mTypeError\u001b[39m                                 Traceback (most recent call last)",
+      "\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[143]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[43mt\u001b[49m\u001b[43m[\u001b[49m\u001b[32;43m0\u001b[39;49m\u001b[43m]\u001b[49m = \u001b[32m5345\u001b[39m\n",
+      "\u001b[31mTypeError\u001b[39m: 'tuple' object does not support item assignment"
+     ]
+    }
+   ],
+   "source": [
+    "t[0] = 5345"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b725e13d-7c8d-4561-ba7f-24d8b1a1b148",
+   "metadata": {},
+   "source": [
+    "# Sets"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8082342a-8045-40ef-b517-22c930270adf",
+   "metadata": {},
+   "source": [
+    "Sets datatype only stores unique values not dupiclates it is unordered and includes membership testing"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 144,
+   "id": "83e7d258-8877-4995-9e06-657d2c15cb05",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'Apple', 'Banana', 'Mango'}"
+      ]
+     },
+     "execution_count": 144,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "fruits = {\"Apple\", \"Banana\", \"Mango\",\"Apple\",\"Banana\"}\n",
+    "fruits"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 145,
+   "id": "556d4cb0-9204-448c-abe7-d4ff93fce47c",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 145,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"Apple\" in fruits"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 146,
+   "id": "858465d3-4e0f-475c-a553-0eeb0a62dc22",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "False"
+      ]
+     },
+     "execution_count": 146,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "\"Grapes\" in fruits"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "3652800f-91d1-41ad-b10b-83859db222ca",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "({'A', 'a', 'b', 'h', 'i', 'n', 'v'}, {'S', 'a', 'm', 'n', 'u'})"
+      ]
+     },
+     "execution_count": 2,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1 = set('Abhinav')\n",
+    "set2 = set('Suman')\n",
+    "set1, set2"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "76442a82-4433-4265-8132-c632f6d7285d",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'A', 'b', 'h', 'i', 'v'}"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1 - set2 # letters in a but not in b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "94ba2184-259a-41a8-b8dd-a489e75be8ae",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'A', 'S', 'a', 'b', 'h', 'i', 'm', 'n', 'u', 'v'}"
+      ]
+     },
+     "execution_count": 4,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1 | set2 #letters in a or b or both"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "669f48b2-9372-4fb1-8191-acc5200adf1a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'A', 'S', 'b', 'h', 'i', 'm', 'u', 'v'}"
+      ]
+     },
+     "execution_count": 5,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1 ^ set2 #letters in a or b but not both"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "bb3921c8-e170-4ca0-87ab-d35b57c03b5e",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'a', 'n'}"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "set1 & set2 #letters in both a & b"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "60be6bf3-cbb8-4c8e-9505-6665e6350e5a",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "{'h', 'i', 'n', 'v'}"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = {x for x in 'abhinav' if x not in 'abc'}\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "21f0ba7f-29ce-4e08-9ac7-bc364fd9ca04",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python [conda env:base] *",
+   "language": "python",
+   "name": "conda-base-py"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.9"
+  },
+  "panel-cell-order": [
+   "4f6d5732-2a57-47a9-91db-3ab4b6d495bf"
+  ]
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
